@@ -23,7 +23,6 @@ Update the system to the latest version: Sudo apt-get update == sudo apt-get dis
 Update Python: Apt-get install python3.5
 Update django: Sudo pip3 install --upgrade django 
 
-
 Access the Project Folder: cd /opt/bitnami/apps/django/django_projects/Project
 Create a Super Admin account: python3 manage.py createsuperuser
 
