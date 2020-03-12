@@ -21,7 +21,8 @@ Verify UFW Status: sudo ufw status - sudo dpkg --get-selections | grep ufw
 
 Update the system to the latest version: Sudo apt-get update == sudo apt-get dist-upgarde
 Update Python: Apt-get install python3.5
-Update Django: Sudo pip3 install django --upgrade --install-option-”--prefix-opt/bitnami/apps/django”
+Update django: Sudo pip3 install --upgrade django 
+
 
 Access the Project Folder: cd /opt/bitnami/apps/django/django_projects/Project
 Create a Super Admin account: python3 manage.py createsuperuser
