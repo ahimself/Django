@@ -1,47 +1,23 @@
 To create a basic HTML homepage in django create a "views.py" file in your project directory and past the following:
 
 from django.http import HttpResponse
-
 def home(request):
     return HttpResponse("<h1>Hello, world! Welcome to my home page...</h1>")
 
 Then go to the the 'urls.py' file inside the same project directory and define the home page as follows (use your brain):
 
 from .views import home
-
     path('', home),
 
-To create a static HTML home page:
+To create a static HTML home page :
 
+1. Create a folder named templates on BASE_DIR aka where manage.py is
 
-1. Create an app: python manage.py startapp homepage
-
-
-2. Add the app to the installed apps in the "settings.py" folder in the project directory:
-
-INSTALLED_APPS = [ 
-'Homepage',
-
-
-3. Specify the path of the home page in the "urls.py" folder in the project directory to redirect users:
-
-urlpatterns = [ 
-url(r'^', include ('homepage.urls')),
-
-
-4. Create a url.py in the homepage directory and add the following: 
-
- from django.conf.urls import url, include
-             from . import views
-
-            urlpatterns = [
-            url(r'^$', views.index, name='index'),
-            ]
+2. Create a file inside named ".index.html"
             
-5. Create a views.py in the homepage directory and add the following:
+3. Create a views.py in the homepage directory and add the following:
 
  from django.http import HttpResponse
-
             def index(request):
             return HttpResponse("<h1>This is the home page</h1>")
 
