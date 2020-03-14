@@ -1,7 +1,27 @@
+Rendering html files:
+
+1. Add the following to the "urls.py" file
+
+from .views import home
+    path('', home),
+
+2. Add the following to the the "views.py" file
+
 from django.shortcuts import render
+from django.http import HttpResponse
+
 def home(request):
     return render(request, 'appname/filename')
     
-from django.shortcuts import render
 def home(request):
     return render(request, 'index.html')
+    
+def dashboard(request): return HttpResponse("<center> <h1>It looks like you're not logged in, make sure you login using your username 
+and password, or create an account if you don't already have one.</h1> <center/>")
+    
+Rendering static files: (templates / html file)
+
+1. Create a folder at the "manage.py" level, and create a file inside named "style.css"
+2. Add {% load static %} at the top of the index.html file
+3. Link to the the style.css file: <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+3. Add STATICFILES_DIRS = [ os.path.join(BASE_DIR, "static"),] at the bottom of the "settings.py" file.
