@@ -21,8 +21,8 @@
                          
       
       <style type="text/css">
-      
-      body {
+
+body {
   background: #000000;
   color: #000000;
   margin-top: 5rem;
@@ -89,7 +89,6 @@ body {
     color: black;
 }
 
-          
           .toggle-btn {
               position:absolute;
               left:180px;
@@ -107,7 +106,7 @@ body {
           .sidebar {
               height:100%;
               width:160px;
-              left:-160px;
+              left:0px;
               position: fixed;
               z-index:1;
               top:0;
