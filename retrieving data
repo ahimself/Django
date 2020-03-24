@@ -1,0 +1,4 @@
+HTTP Methods ==> POST VS GET 
+
+POST: sending secure encrypted information that cannot be seen from either ends, and is not stored on the actual web server
+GET: unsecure way of getting information
